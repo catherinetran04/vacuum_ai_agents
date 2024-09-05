@@ -1,16 +1,14 @@
-'''
-Adapted from Professor Watters' code
-
-
-'''
-
 import sys 
 sys.path.append('aima-python')
 from agents import *
 
 class HW1:
-
-    def problem_a(self):
+    """
+    Run the ReflexVacuumAgent in the TrivialVacuumEnvironment for 15 steps. Use the
+    TraceAgent class to print out its perceptions and actions at each time step. Return
+    the environment status.
+    """
+    def reflex_vacuum_agent(self):
 
         agent = ReflexVacuumAgent()
         TraceAgent(agent)
@@ -20,7 +18,12 @@ class HW1:
         environment.run(15)
         return environment.status
 
-    def problem_b(self):
+    """
+    Run the ModelBasedVacuumAgent in the TrivialVacuumEnvironment for 15 steps.
+    Use the TraceAgent class to print out its perceptions and actions at each time step.
+    Return the environment status.
+    """
+    def model_based_vacuum_agent(self):
 
         agent = ModelBasedVacuumAgent()
         TraceAgent(agent)
@@ -29,8 +32,13 @@ class HW1:
         environment.add_thing(agent)
         environment.run(15)
         return environment.status
-
-    def problem_c(self):
+        
+    """
+    Run the RandomVacuumAgent agent in the TrivialVacuumEnvironment for 15 steps.
+    Use the TraceAgent class to print out its perceptions and actions at each time step.
+    Return the environment status.
+    """
+    def random_vacuum_agent(self):
 
         agent = RandomVacuumAgent()
         TraceAgent(agent)
@@ -40,7 +48,10 @@ class HW1:
         environment.run(15)
         return environment.status
 
-    def problem_d(self):
+    """
+    Use the compare agents function to compare the three agents in the trivial environment. Return the results of the comparison.
+    """
+    def compare(self):
         environment = TrivialVacuumEnvironment
         agents = [ModelBasedVacuumAgent, RandomVacuumAgent, ReflexVacuumAgent]
         result = compare_agents(environment, agents)
@@ -49,10 +60,10 @@ class HW1:
 
 def main():
     hw1 = HW1()
-    print("Problem a:", hw1.problem_a())
-    print("Problem b:", hw1.problem_b())
-    print("Problem c:", hw1.problem_c())
-    print("Problem d:", hw1.problem_d())
+    print("Problem a:", hw1.reflex_vacuum_agent())
+    print("Problem b:", hw1.model_based_vacuum_agent())
+    print("Problem c:", hw1.random_vacuum_agent())
+    print("Problem d:", hw1.compare())
 
 if __name__ == '__main__':
     main()
