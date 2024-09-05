@@ -29,7 +29,6 @@ This applies for other agents such as the model based vacuum agent and the rando
 TraceAgent class to print out its perceptions and actions at each time step. Return
 the environment status.
 ```
-<Agent> perceives ((0, 0), 'Dirty') and does Suck
 <Agent> perceives ((0, 0), 'Clean') and does Right
 <Agent> perceives ((1, 0), 'Dirty') and does Suck
 <Agent> perceives ((1, 0), 'Clean') and does Left
@@ -44,7 +43,8 @@ the environment status.
 <Agent> perceives ((0, 0), 'Clean') and does Right
 <Agent> perceives ((1, 0), 'Clean') and does Left
 <Agent> perceives ((0, 0), 'Clean') and does Right
-Problem a: {(0, 0): 'Clean', (1, 0): 'Clean'}
+<Agent> perceives ((1, 0), 'Clean') and does Left
+Reflex:  {(0, 0): 'Clean', (1, 0): 'Clean'}
 ```
 
 ## Model Based Vacuum Agent
@@ -52,22 +52,22 @@ Problem a: {(0, 0): 'Clean', (1, 0): 'Clean'}
 Use the TraceAgent class to print out its perceptions and actions at each time step.
 Return the environment status.
 ```
-<Agent> perceives ((0, 0), 'Dirty') and does Suck
-<Agent> perceives ((0, 0), 'Clean') and does Right
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-<Agent> perceives ((1, 0), 'Clean') and does NoOp
-Problem b: {(0, 0): 'Clean', (1, 0): 'Clean'}
+<Agent> perceives ((1, 0), 'Dirty') and does Suck
+<Agent> perceives ((1, 0), 'Clean') and does Left
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+Model:  {(0, 0): 'Clean', (1, 0): 'Clean'}
 ```
 
 ## Random Vacuum Agent
@@ -75,26 +75,25 @@ Problem b: {(0, 0): 'Clean', (1, 0): 'Clean'}
 Use the TraceAgent class to print out its perceptions and actions at each time step.
 Return the environment status.
 ```
-<Agent> perceives ((0, 0), 'Dirty') and does Suck
 <Agent> perceives ((0, 0), 'Clean') and does Suck
-<Agent> perceives ((0, 0), 'Clean') and does Left
-<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does Suck
 <Agent> perceives ((0, 0), 'Clean') and does Right
-<Agent> perceives ((1, 0), 'Dirty') and does Right
-<Agent> perceives ((1, 0), 'Dirty') and does NoOp
-<Agent> perceives ((1, 0), 'Dirty') and does Suck
 <Agent> perceives ((1, 0), 'Clean') and does NoOp
 <Agent> perceives ((1, 0), 'Clean') and does Suck
+<Agent> perceives ((1, 0), 'Clean') and does Left
+<Agent> perceives ((0, 0), 'Clean') and does NoOp
+<Agent> perceives ((0, 0), 'Clean') and does Left
+<Agent> perceives ((0, 0), 'Clean') and does Right
 <Agent> perceives ((1, 0), 'Clean') and does Left
 <Agent> perceives ((0, 0), 'Clean') and does Suck
 <Agent> perceives ((0, 0), 'Clean') and does Suck
 <Agent> perceives ((0, 0), 'Clean') and does Right
-<Agent> perceives ((1, 0), 'Clean') and does Right
-Problem c: {(0, 0): 'Clean', (1, 0): 'Clean'}
-```
+<Agent> perceives ((1, 0), 'Clean') and does Suck
+<Agent> perceives ((1, 0), 'Clean') and does Left
+Random:  {(0, 0): 'Clean', (1, 0): 'Clean'}
 
 ## Compare Agents
 • Use the compare agents function to compare the three agents in the trivial environment. Return the results of the comparison.
 ```
-Problem d: [(<function ModelBasedVacuumAgent at 0x1056c2b90>, 8), (<function RandomVacuumAgent at 0x1056c29e0>, -498.3), (<function ReflexVacuumAgent at 0x1056c2b00>, -990.1)]
+Compare:  [(<function ModelBasedVacuumAgent at 0x11f98f5b0>, 9), (<function RandomVacuumAgent at 0x11f98f400>, -485.7), (<function ReflexVacuumAgent at 0x11f98f520>, -989)]
 ```
