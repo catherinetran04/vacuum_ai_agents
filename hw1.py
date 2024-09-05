@@ -2,7 +2,7 @@ import sys
 sys.path.append('aima-python')
 from agents import *
 
-class VacuumAgent:
+class VaccumAgents:
     """
     Run the ReflexVacuumAgent in the TrivialVacuumEnvironment for 15 steps. Use the
     TraceAgent class to print out its perceptions and actions at each time step. Return
@@ -59,11 +59,11 @@ class VacuumAgent:
 
 
 def main():
-    hw1 = HW1()
-    print("Problem a:", hw1.reflex_vacuum_agent())
-    print("Problem b:", hw1.model_based_vacuum_agent())
-    print("Problem c:", hw1.random_vacuum_agent())
-    print("Problem d:", hw1.compare())
+    vc = VaccumAgents()
+    print("Problem a:", vc.reflex_vacuum_agent())
+    print("Problem b:", vc.model_based_vacuum_agent())
+    print("Problem c:", vc.random_vacuum_agent())
+    print("Problem d:", vc.compare())
 
 if __name__ == '__main__':
     main()
