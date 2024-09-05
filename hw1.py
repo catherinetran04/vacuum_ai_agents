@@ -60,10 +60,10 @@ class VaccumAgents:
 
 def main():
     vc = VaccumAgents()
-    print("Problem a:", vc.reflex_vacuum_agent())
-    print("Problem b:", vc.model_based_vacuum_agent())
-    print("Problem c:", vc.random_vacuum_agent())
-    print("Problem d:", vc.compare())
+    print("Reflex: ", vc.reflex_vacuum_agent())
+    print("Model: ", vc.model_based_vacuum_agent())
+    print("Random: ", vc.random_vacuum_agent())
+    print("Compare: ", vc.compare())
 
 if __name__ == '__main__':
     main()
