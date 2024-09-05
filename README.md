@@ -19,15 +19,15 @@ Loading in agent.py using the interactive python interpreter, there are comments
 - create an environment for it
 - then run it in the environment
 
-If you wanted to run the agent in that environment for a limited amount of time, you can pass an integer in as a parameter in the
+To run the agent in that environment for a limited amount of time, pass an integer in as a parameter in the
 environment.run call (e.g. environment.run(50))
 
 This applies for other agents such as the model based vacuum agent and the random vacuum agent.
 
 ## Reflex Vacuum Agent
-• Run the ReflexVacuumAgent in the TrivialVacuumEnvironment for 15 steps. Use the
-TraceAgent class to print out its perceptions and actions at each time step. Return
-the environment status.
+• Here we run the ReflexVacuumAgent in the TrivialVacuumEnvironment for 15 steps and use the
+TraceAgent class to print out its perceptions and actions at each time step. Following that, we can return
+the environment status:
 ```
 <Agent> perceives ((0, 0), 'Clean') and does Right
 <Agent> perceives ((1, 0), 'Dirty') and does Suck
@@ -48,9 +48,9 @@ Reflex:  {(0, 0): 'Clean', (1, 0): 'Clean'}
 ```
 
 ## Model Based Vacuum Agent
-• Run the ModelBasedVacuumAgent in the TrivialVacuumEnvironment for 15 steps.
-Use the TraceAgent class to print out its perceptions and actions at each time step.
-Return the environment status.
+• Here we run the ModelBasedVacuumAgent in the TrivialVacuumEnvironment for 15 steps and
+use the TraceAgent class to print out its perceptions and actions at each time step. Following that, 
+we can return the environment status:
 ```
 <Agent> perceives ((1, 0), 'Dirty') and does Suck
 <Agent> perceives ((1, 0), 'Clean') and does Left
@@ -71,9 +71,9 @@ Model:  {(0, 0): 'Clean', (1, 0): 'Clean'}
 ```
 
 ## Random Vacuum Agent
-• Run the RandomVacuumAgent agent in the TrivialVacuumEnvironment for 15 steps.
-Use the TraceAgent class to print out its perceptions and actions at each time step.
-Return the environment status.
+• Here we run the RandomVacuumAgent agent in the TrivialVacuumEnvironment for 15 steps and 
+use the TraceAgent class to print out its perceptions and actions at each time step. Following that,
+we return the environment status:
 ```
 <Agent> perceives ((0, 0), 'Clean') and does Suck
 <Agent> perceives ((0, 0), 'Clean') and does Suck
@@ -91,9 +91,10 @@ Return the environment status.
 <Agent> perceives ((1, 0), 'Clean') and does Suck
 <Agent> perceives ((1, 0), 'Clean') and does Left
 Random:  {(0, 0): 'Clean', (1, 0): 'Clean'}
+```
 
 ## Compare Agents
-• Use the compare agents function to compare the three agents in the trivial environment. Return the results of the comparison.
+• We use se the compare_agents function to compare the three agents in the trivial environment. Within the code, we return the results of the comparison.
 ```
 Compare:  [(<function ModelBasedVacuumAgent at 0x11f98f5b0>, 9), (<function RandomVacuumAgent at 0x11f98f400>, -485.7), (<function ReflexVacuumAgent at 0x11f98f520>, -989)]
 ```
