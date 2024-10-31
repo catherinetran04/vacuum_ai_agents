@@ -97,4 +97,4 @@ Random:  {(0, 0): 'Clean', (1, 0): 'Clean'}
 • We use the compare_agents function to compare the three agents in the trivial environment. Within the code, we return the results of the comparison.
 ```
 Compare:  [(<function ModelBasedVacuumAgent at 0x11f98f5b0>, 9), (<function RandomVacuumAgent at 0x11f98f400>, -485.7), (<function ReflexVacuumAgent at 0x11f98f520>, -989)]
-```
+``` 
